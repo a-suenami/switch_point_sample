@@ -1,0 +1,13 @@
+default: &default
+  adapter: mysql2
+  host: localhost
+  username: root
+  encoding: utf8
+
+development_master:
+  <<: *default
+  database: mydb
+
+development_slave:
+  <<: *default
+  database: mydb_read
